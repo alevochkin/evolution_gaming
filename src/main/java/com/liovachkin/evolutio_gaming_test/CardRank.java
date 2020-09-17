@@ -30,7 +30,8 @@ public enum CardRank {
     }
 
     public CardRank getNext() {
-        return CardRank.values()[ordinal() + 1];
+        var nextOrdinal = ordinal() + 1;
+        return nextOrdinal < 13 ? CardRank.values()[nextOrdinal] : null;
     }
 
     public String getRank() {

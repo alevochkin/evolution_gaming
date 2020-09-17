@@ -8,7 +8,6 @@ import java.util.Scanner;
  */
 public class App {
     public static void main(String[] args) {
-        Reader reader = new Reader();
-        reader.load().forEach(texasHoldem -> System.out.println(texasHoldem.results()) );
+        new Reader().load().forEach(texasHoldem -> System.out.println(texasHoldem.results()) );
     }
 }

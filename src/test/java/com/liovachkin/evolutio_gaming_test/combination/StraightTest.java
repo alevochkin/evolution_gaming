@@ -36,6 +36,20 @@ public class StraightTest {
     }
 
     @Test
+    public void testSecond() {
+        Straight straight  = new Straight();
+        List<Card> cards = new ArrayList<>();
+        cards.add(new Card().setRank(CardRank.JACK).setSuit(CardSuit.SPADES));
+        cards.add(new Card().setRank(CardRank.QUEEN).setSuit(CardSuit.DIAMONDS));
+        cards.add(new Card().setRank(CardRank.KING).setSuit(CardSuit.HEARTS));
+        cards.add(new Card().setRank(CardRank.ACE).setSuit(CardSuit.DIAMONDS));
+        cards.add(new Card().setRank(CardRank.ACE).setSuit(CardSuit.CLUBS));
+        cards.add(new Card().setRank(CardRank.ACE).setSuit(CardSuit.HEARTS));
+        cards.add(new Card().setRank(CardRank.ACE).setSuit(CardSuit.SPADES));
+        assertThat(straight.combination(cards).getCards(), nullValue());
+    }
+
+    @Test
     public void testNotFound() {
         Straight straight  = new Straight();
         List<Card> cards = new ArrayList<>();
